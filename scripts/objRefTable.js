@@ -13,6 +13,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch,
 		C3.Plugins.HTMLElement,
 		C3.Plugins.Text,
+		C3.Plugins.Browser,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.System.Acts.Wait,
 		C3.Behaviors.LOS.Acts.AddObstacle,
@@ -35,6 +36,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.HTMLElement.Acts.SetWidth,
 		C3.Plugins.System.Exps.viewportwidth,
 		C3.Plugins.Shape3D.Acts.SetPosToObject,
+		C3.Plugins.Text.Exps.Y,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.Car.Acts.SimulateControl,
 		C3.Plugins.Touch.Cnds.CompareTouchSpeed,
@@ -56,9 +58,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.ScriptsInEvents.EventSheet1_Event19,
 		C3.Plugins.Keyboard.Cnds.IsKeyDown,
 		C3.Plugins.System.Cnds.Compare,
-		C3.Plugins.Text.Acts.SetVisible,
+		C3.Plugins.Text.Acts.SetSize,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
-		C3.Plugins.Touch.Cnds.OnTapGestureObject
+		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.Browser.Exps.QueryParam,
+		C3.Plugins.System.Cnds.TriggerOnce,
+		C3.Plugins.Text.Acts.SetVisible
 	];
 };
 self.C3_JsPropNameTable = [
@@ -96,6 +101,9 @@ self.C3_JsPropNameTable = [
 	{Arch: 0},
 	{Ceiling: 0},
 	{Text: 0},
+	{Browser: 0},
+	{PurchaseSuccessModal: 0},
+	{PurchaseModalText: 0},
 	{DEVICE: 0}
 ];
 
@@ -130,5 +138,8 @@ self.InstanceType = {
 	WindowsDefault: class extends self.I3DShapeInstance {},
 	Arch: class extends self.I3DShapeInstance {},
 	Ceiling: class extends self.I3DShapeInstance {},
-	Text: class extends self.ITextInstance {}
+	Text: class extends self.ITextInstance {},
+	Browser: class extends self.IInstance {},
+	PurchaseSuccessModal: class extends self.ISpriteInstance {},
+	PurchaseModalText: class extends self.ITextInstance {}
 }

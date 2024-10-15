@@ -49,7 +49,7 @@ const scriptsInEvents = {
 
         // Add product object to the cart
         cart.push({ id: productId, name: productName });
-        console.log('Added to cart:', productName);
+        console.log('Added to cart:', productName, 'Product ID:', productId);
 
         // Change button text to 'Added to Cart'
         button.textContent = 'Added to Cart';
